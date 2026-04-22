@@ -56,4 +56,6 @@ public class RoomsController : ControllerBase
         }
         return Ok(_rooms.FirstOrDefault(x => x.Id == idRoom));
     }
+    
+    private readonly I
 }
