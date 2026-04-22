@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Apbd-cw5-git--s27593")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cdc842e8cbc9bb562eb8d5cd6771039f9da779e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c67ac5a5538703d536d81129549b31e133aed19f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Apbd-cw5-git--s27593")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Apbd-cw5-git--s27593")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
