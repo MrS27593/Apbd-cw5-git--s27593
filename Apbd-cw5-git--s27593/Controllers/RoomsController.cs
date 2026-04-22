@@ -26,10 +26,34 @@ public class RoomsController : ControllerBase
         }
         return Ok(Room.roomslist);
     }
-
-    [HttpGet("{id}")]
-    public Room GetRoom(int id)
+    
+    [HttpGet("/easy")]
+    public IActionResult GetAllRoomsEasier()
     {
-        return Room.roomslist[id];
+        return Ok(_rooms);
+    }
+    
+    [HttpPost()]
+    public IActionResult CreateRoom([FromBody]Room room)
+    {
+        _rooms.Add(room);
+        return Ok(_rooms);
+    }
+
+    
+    
+    
+    //Convention over configuration
+    [HttpGet("/{idRoom}")]
+    public IActionResult GetRoomByidRoom(int idRoom, string name)
+    {
+        //api/rooms/1?name=Name
+        var room = _rooms.FirstOrDefault(r => r.Id == idRoom); 
+        //First(first if not then EXC), Single(one if not EXC), FirstOrDefault(first or null), SingleOrDefault(one if not null)
+        if (room == null)
+        {
+            return NotFound("Room not found");
+        }
+        return Ok(_rooms.FirstOrDefault(x => x.Id == idRoom));
     }
 }
